@@ -9,6 +9,10 @@
   "author": "Sudhanva Paturkar",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2"
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "google-auth-library": "^9.15.0",
+    "morgan": "^1.10.0"
   }
 }
