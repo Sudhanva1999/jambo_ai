@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .inpField {
-  @apply  bg-background;
+  @apply bg-background;
   border-radius: 10px;
   height: 2.5rem;
   padding: 1rem;
@@ -13,4 +13,3 @@
 .addShadow {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-

@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-
   :root {
-    --background-image: url('/src/resources/images/global/bg-light.jpg');
     --text: #050316;
     --background: #fbfbfe;
     --primary: #cece27;
@@ -12,7 +10,6 @@
     --accent: #ffdb3d;
   }
   .dark {
-    --background-image: url('/src/resources/images/global/bg-dark.jpg');
     --text: #eae9fc;
     --background: #010104;
     --primary: #d89e31;

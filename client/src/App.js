@@ -1,8 +1,9 @@
 /* eslint-disable */
-
+import "./index.css"
+import "./App.css";
 import React, { Component } from "react";
 import Login from "./components/login/googleAuth";
-import "./App.css";
+import ThemeSlider from "./components/common/slider";
 
 class App extends Component {
   constructor(props) {
@@ -13,27 +14,22 @@ class App extends Component {
   }
 
   toggleDarkMode = () => {
-    const { isDarkMode } = this.state;
-    this.setState({ isDarkMode: !isDarkMode });
-
-    if (!isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    this.setState(
+      (prevState) => ({ isDarkMode: !prevState.isDarkMode }),
+      () => {
+        if (this.state.isDarkMode) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+    );
   };
 
   render() {
     return (
       <div className="App bg-background text-text min-h-screen flex flex-col items-center justify-center">
-        {/* Theme Toggle Button */}
-        <button
-          onClick={this.toggleDarkMode}
-          className="px-4 py-2 mb-8 bg-accent text-text font-semibold rounded-lg shadow-md"
-        >
-          Toggle {this.state.isDarkMode ? "Light" : "Dark"} Mode
-        </button>
-
+        <ThemeSlider checked={this.state.isDarkMode} onChange={this.toggleDarkMode} />
         <div className="mt-8">
           <Login />
         </div>

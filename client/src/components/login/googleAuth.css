@@ -1,13 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
   
 .loginForm {
     height: 30rem;
     width: 20rem;
     border-radius: 25px;
 
+
 }
+
+   
 
 .loginLogo{
     height: 10rem;

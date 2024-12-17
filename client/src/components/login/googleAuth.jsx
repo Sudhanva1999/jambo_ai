@@ -19,7 +19,7 @@ async function auth() {
 
 function Login() {
   return (
-    <div className="loginForm bg-secondary flex flex-col addShadow  justify-center items-center">
+    <div className="bg-secondary loginForm  flex flex-col addShadow  justify-center items-center">
         <img src={TransparentLogo} className="loginLogo"/>
         <input className="inpField " id="username" placeholder="Username" type="text" />
         <input className="inpField " id="password" placeholder="Password" type="password" />
