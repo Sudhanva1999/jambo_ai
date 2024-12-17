@@ -1,5 +1,16 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inpField {
+  @apply  bg-background;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
 }
+
+.addShadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+

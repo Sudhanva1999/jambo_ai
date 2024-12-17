@@ -1,6 +1,8 @@
  /* eslint-disable */ 
 
 import React from "react";
+import "./googleAuth.css";
+import TransparentLogo from "../../resources/images/global/transparent_logo.png"
 
 function navigate(url) {
   window.location.href = url;
@@ -17,17 +19,13 @@ async function auth() {
 
 function Login() {
   return (
-    <div>
-      <h1>Welcome to Consulting Ninja!</h1>
-      <h3>Google OAuth!</h3>
-      <p>
-        Visit{" "}
-        to see more great videos!
-      </p>
+    <div className="loginForm bg-secondary flex flex-col addShadow  justify-center items-center">
+        <img src={TransparentLogo} className="loginLogo"/>
+        <input className="inpField " id="username" placeholder="Username" type="text" />
+        <input className="inpField " id="password" placeholder="Password" type="password" />
 
-      <button className="btn-auth" type="button" onClick={() => auth()}>
-        <p>Sign in with Google Here</p>
-        <img className="btn-auth-img" alt="google sign in" />
+        <button className="btn-auth bg-accent addShadow signInWithGoogle" type="button" onClick={() => auth()}>
+        <img className="googleImg" width="20" height="20" src="https://img.icons8.com/fluency/50/google-logo.png" alt="google-logo"/>  Sign In With Google
       </button>
     </div>
   );
